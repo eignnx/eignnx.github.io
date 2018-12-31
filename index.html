@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Bitter|Bree+Serif" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
+
     <script src="html/libraries/p5.js" charset="utf-8"></script>
     <script src="html/libraries/p5.dom.js" charset="utf-8"></script>
     <script src="index.js" charset="utf-8"></script>
@@ -19,12 +21,45 @@
       <section id="projectGrid">
 
         <div class="projectGridItem">
+          <h2><a href="html/auto-rhyme">AutoRhyme</a></h2>
+          <p>Type in a sentence, then click to selectively replace words with rhymes or near-rhymes.</p>
+          <span class="projectTags">
+            <a href="p5js.org">p5.js</a>
+            <a href="#">language</a>
+            <a href="http://rednoise.org/rita/">RiTa</a>
+            <a href="#">javascript</a>
+          </span>
+        </div>
+
+        <div class="projectGridItem">
+          <h2><a href="https://github.com/eignnx/misp">misp</a></h2>
+          <p>An M-expression-based Lisp descendant implemented on top of Python3.6 and SLY</p>
+          <span class="projectTags">
+            <a href="#">python</a>
+            <a href="#">language</a>
+            <a href="#">interpreter</a>
+            <a href="#">lisp</a>
+          </span>
+        </div>
+
+        <div class="projectGridItem">
           <h2><a href="html/moops">Moops</a></h2>
           <p>Moops are evolved creatures that can eat food, or other moops.</p>
           <span class="projectTags">
             <a href="p5js.org">p5.js</a>
             <a href="#">javascript</a>
             <a href="#">evolution</a>
+          </span>
+        </div>
+
+        <div class="projectGridItem">
+          <h2><a href="https://github.com/eignnx/dedupe">dedupe</a></h2>
+          <p>A utility program that deletes files from your disk if they are backed up in a different directory/drive.</p>
+          <span class="projectTags">
+            <a href="#">python</a>
+            <a href="#">systems programming</a>
+            <a href="#">file systems</a>
+            <a href="#">CLI</a>
           </span>
         </div>
 
@@ -36,17 +71,6 @@
             <a href="#">javascript</a>
             <a href="#">linear algebra</a>
             <a href="#">3D</a>
-          </span>
-        </div>
-
-        <div class="projectGridItem">
-          <h2><a href="html/auto-rhyme">AutoRhyme</a></h2>
-          <p>Type in a sentence, then click to selectively replace words with rhymes or near-rhymes.</p>
-          <span class="projectTags">
-            <a href="p5js.org">p5.js</a>
-            <a href="#">language</a>
-            <a href="http://rednoise.org/rita/">RiTa</a>
-            <a href="#">javascript</a>
           </span>
         </div>
 
@@ -65,12 +89,12 @@
     </main>
 
     <footer>
-      <h3>
+      <h2>
         Connect with me on
-        <a href="https://twitter.com/eignnx">Twitter</a>,
-        <a href="https://github.com/eignnx">GitHub</a>
+        <a href="https://twitter.com/eignnx"><i class="fab fa-twitter"></i></a> and
+        <a href="https://github.com/eignnx"><i class="fab fa-github-alt"></i></a>!
         <!--Too soon... <a href="https://www.youtube.com/channel/UCNPxu4dXtD-pD-YtcXIBqXg">YouTube</a> -->
-      </h3>
+      </h2>
     </footer>
   </body>
 </html>
