@@ -21,6 +21,10 @@ body {
   background-color: #ecf;
 }
 
+header {
+  margin-top: 8rem;
+}
+
 .siteTitle {
   font-size: 40pt;
   font-style: normal;
