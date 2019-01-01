@@ -36,6 +36,11 @@ function draw() {
   canvas.position(0, window.scrollY);
 }
 
+function mouseClicked() {
+  const mouse = createVector(mouseX, mouseY);
+  pens.add(new Pen(mouse));
+}
+
 const PEN_MIN_R = 100;
 const PEN_MAX_R = 500;
 
