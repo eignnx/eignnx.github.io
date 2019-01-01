@@ -9,29 +9,32 @@ let scale_;
 
 let cube;
 
-
-
 function setup() {
-  createCanvas(400, 400);
-  
-  let fovDiv = createDiv();
+  canvas = createCanvas(windowWidth, windowHeight);
+  let container = select("#container");
+  canvas.parent(container);
+
+  let fovDiv = createDiv("");
   let fovP = createP("Field of View");
   fovP.parent(fovDiv);
   fov = createSlider(0, 100, 50, 0.1);
   fov.parent(fovDiv);
-  
-  let camDistDiv = createDiv();
+  fovDiv.parent(container);
+
+  let camDistDiv = createDiv("");
   let camDistP = createP("Camera Distance");
   camDistP.parent(camDistDiv);
   camDist = createSlider(0, 10, 5, 0.1);
   camDist.parent(camDistDiv);
-  
-  let scaleDiv = createDiv();
+  camDistDiv.parent(container);
+
+  let scaleDiv = createDiv("");
   let scaleP = createP("Scene Scale");
   scaleP.parent(scaleDiv);
   scale_ = createSlider(0.5, 5, 3, 0.1);
   scale_.parent(scaleDiv);
-  
+  scaleDiv.parent(container);
+
   cube = initializeCube(0, 0, 50, 100);
 }
 
@@ -45,7 +48,7 @@ function drawNet(net) {
   const Z = Matrix.RotZ(t);
 
   const rotation = [X, Y, Z].reduce((acc, cur) => cur.times(acc));
-  
+
   let into2D = pt3D => {
     const rotated = rotation.times(pt3D);
     const d = rotated[2][0] / fov.value() + camDist.value();
@@ -53,7 +56,7 @@ function drawNet(net) {
     const proj = projection.times(scale_);
     //proj.print();
     const pt2D = proj.times(rotated);
-    
+
     const x = pt2D.data[0][0];
     const y = pt2D.data[1][0];
     return [x, y];
@@ -64,7 +67,7 @@ function drawNet(net) {
     strokeWeight(8);
     point(...into2D(pt3D));
   });
-  
+
   net.forEachEdge((pt1, pt2) => {
   	stroke(0);
     strokeWeight(2);
