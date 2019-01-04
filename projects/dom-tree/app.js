@@ -12,7 +12,12 @@ $(document).ready(() => {
 
   let root =
     vertical([
-      horizontal([horizontal([square(), circle()])]),
+      horizontal([
+        horizontal([
+          square(),
+          circle()
+        ])
+      ]),
       horizontal([
         vertical([
           square(),
