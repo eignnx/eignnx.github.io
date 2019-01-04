@@ -21,11 +21,19 @@ function applyMouseEvents(selected) {
     })
     .click(function(e) {
       e.stopPropagation()
+      
+      // Deselect if background is clicked, or if the selected item is clicked.
       if (ctx.selected) {
-        ctx.selected.removeClass('selected');
+        if (ctx.selected.is($(this))) {
+          ctx.selected.removeClass('selected');
+          ctx.selected = null;
+        } else {
+          ctx.selected.removeClass('selected');
+          ctx.selected = $(this).addClass('selected')
+        }
+      } else {
+        ctx.selected = $(this).addClass('selected')
       }
-      ctx.selected = $(this)
-      $(this).addClass('selected')
     })
 }
 
