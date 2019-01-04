@@ -55,10 +55,10 @@ function circle() {
   return dom
 }
 
-function composite(children, type) {
+function composite(children, html) {
   const dom = $('<div>')
   dom.addClass('tree-ele-no-highlight')
-  dom.html(type)
+  dom.html(html)
   dom.data('children', children)
   children.forEach(child => dom.append(child))
   applyMouseEvents(dom)
@@ -67,13 +67,13 @@ function composite(children, type) {
 }
 
 function vertical(children) {
-  const dom = composite(children, 'vertical')
+  const dom = composite(children, '<span>vertical</span>')
   dom.addClass('vertical')
   return dom
 }
 
 function horizontal(children) {
-  const dom = composite(children, 'horizontal')
+  const dom = composite(children, '<span>horizontal</span>')
   dom.addClass('horizontal')
   return dom
 }

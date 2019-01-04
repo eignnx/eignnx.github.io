@@ -61,6 +61,11 @@ body section {
   align-items: center;
 }
 
+.horizontal > span {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
 .horizontal {
   display: flex;
   flex-direction: row;
