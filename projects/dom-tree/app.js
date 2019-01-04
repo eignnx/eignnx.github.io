@@ -21,14 +21,14 @@ function applyMouseEvents(selected) {
     })
     .click(function(e) {
       e.stopPropagation()
-      
+
       // Deselect if background is clicked, or if the selected item is clicked.
       if (ctx.selected) {
         if (ctx.selected.is($(this))) {
-          ctx.selected.removeClass('selected');
+          ctx.selected.removeClass('selected')
           ctx.selected = null;
         } else {
-          ctx.selected.removeClass('selected');
+          ctx.selected.removeClass('selected')
           ctx.selected = $(this).addClass('selected')
         }
       } else {
@@ -48,12 +48,22 @@ $(document).ready(() => {
   let root =
     vertical([
       horizontal([horizontal([square(), circle()])]),
-      circle()
+      horizontal([
+        vertical([
+          square(),
+          square()
+        ]),
+        vertical([
+          square(),
+          circle(),
+          square()
+        ])
+      ])
     ])
 })
 
 function atom() {
-  const dom = $(`<div>123</div>`)
+  const dom = $('<div>')
   dom.addClass('tree-ele-no-highlight atom')
   applyMouseEvents(dom)
   $('#tree-container').append(dom)
@@ -75,7 +85,7 @@ function circle() {
 }
 
 function composite(children, type) {
-  const dom = $(`<div></div>`)
+  const dom = $('<div>')
   dom.addClass('tree-ele-no-highlight')
   dom.html(type)
   dom.data('children', children)
