@@ -1,0 +1,96 @@
+:root {
+  --tree-ele-border-thickness: 0.2rem;
+  --tree-ele-border-color: rgba(255, 255, 255, 0.8);
+  --no-highlight-bg-color: rgba(0, 100, 255, 0.3);
+  --highlight-bg-color: rgba(0, 100, 200, 0.5);
+}
+
+html {
+  background-image: linear-gradient(to top right, #002, #008);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body section {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#tree-container {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#tree-container div {
+  margin: 0.5rem 0.5rem;
+
+  border-style: solid;
+  border-radius: 8px;
+
+  color: white;
+  font-family: monospace;
+  font-size: 1rem;
+
+  transition: 0.25s;
+}
+
+.tree-ele-no-highlight {
+  background: var(--no-highlight-bg-color);
+  border-color: transparent;
+}
+
+.tree-ele-highlight {
+  background: var(--highlight-bg-color);
+  border-color: var(--tree-ele-border-color);
+}
+
+.atom {
+  padding: 1rem;
+}
+
+.vertical {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.horizontal, .vertical {
+  padding: 1rem;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 50% !important;
+}
+
+.square {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem !important;
+  height: 2rem !important;
+  border-radius: 0 !important;
+}
+
+.selected {
+  background-color: var(--highlight-bg-color);
+  border-color: var(--tree-ele-border-color);
+  border-style: dashed !important;
+}
