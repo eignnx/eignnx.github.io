@@ -29,12 +29,17 @@ body {
 
 #tool-bar > ul {
   list-style: none;
+  display: flex;
+}
+
+#tool-bar > ul > li {
+  margin: 0.5rem;
 }
 
 button {
   background: var(--no-highlight-bg-color);
   color: white;
-  padding: 1rem;
+  padding: 0.5rem;
   border: solid var(--tree-ele-border-thickness) transparent;
   border-radius: 0.5rem;
   transition: 0.3s;
@@ -51,6 +56,7 @@ body section {
 }
 
 #tree-container {
+  margin: auto;
   display: flex;
   text-align: center;
   align-items: center;

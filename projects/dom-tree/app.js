@@ -11,6 +11,12 @@ let ctx = {
   root: undefined
 }
 
+function thenClearSelected(fn) {
+  ctx.selected.forEach(dom => dom.removeClass('selected'))
+  fn()
+  ctx.selected.clear()
+}
+
 $(document).ready(() => {
   $('html').click(function() {
     if (ctx.selected.size > 0) {
@@ -19,8 +25,14 @@ $(document).ready(() => {
     ctx.selected = new Set([])
   })
 
-  const mergeBtn = $('#tool-bar button[name = "merge"]')
+  const mergeBtn = $('button[name = "merge"]')
   mergeBtn.on('click', mergeSelected)
+
+  const surroundHorizontallyBtn = $('button[name = "surround-horizontal"]')
+  surroundHorizontallyBtn.on('click', surroundHorizontally)
+
+  const surroundVerticallyBtn = $('button[name = "surround-vertical"]')
+  surroundVerticallyBtn.on('click', surroundVertically)
 
   ctx.root =
     vertical([
@@ -45,17 +57,44 @@ $(document).ready(() => {
     ])
 })
 
-function mergeSelected() {
-  for (let parent of ctx.selected) {
-    for (let child of ctx.selected) {
-      if (child.parent().is(parent)) {
-        if ((child.hasClass('horizontal') && parent.hasClass('horizontal'))
-         || (child.hasClass('vertical') && parent.hasClass('vertical'))) {
-           let grandchildren = child.children('div')
-           child.replaceWith(grandchildren)
-           return
+function mergeSelected(e) {
+  e.stopPropagation()
+
+  thenClearSelected(() => {
+    for (let parent of ctx.selected) {
+      for (let child of ctx.selected) {
+        if (child.parent().is(parent)) {
+          if ((child.hasClass('horizontal') && parent.hasClass('horizontal'))
+           || (child.hasClass('vertical') && parent.hasClass('vertical'))) {
+             let grandchildren = child.children('div')
+             child.replaceWith(grandchildren)
+          }
         }
       }
     }
-  }
+  })
+}
+
+function surroundHorizontally(e) {
+  e.stopPropagation()
+
+  thenClearSelected(() => {
+    ctx.selected.forEach(dom => {
+      let cloned = dom.clone()
+      applyMouseEventsRec(cloned)
+      dom.replaceWith(horizontal([cloned]))
+    })
+  })
+}
+
+function surroundVertically(e) {
+  e.stopPropagation()
+
+  thenClearSelected(() => {
+    ctx.selected.forEach(dom => {
+      let cloned = dom.clone()
+      applyMouseEventsRec(cloned)
+      dom.replaceWith(vertical([cloned]))
+    })
+  })
 }

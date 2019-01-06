@@ -6,6 +6,14 @@ function applyMouseEvents(selected) {
     .click(domNodeOnClick)
 }
 
+function applyMouseEventsRec(selected) {
+  applyMouseEvents(selected)
+  const children = selected.children('div')
+  if (children.length > 0) {
+    applyMouseEventsRec(children)
+  }
+}
+
 function domNodeMouseOver(e) {
   e.stopPropagation()
   const parent = $(this).parent()
