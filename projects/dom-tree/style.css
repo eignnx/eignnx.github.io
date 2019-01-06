@@ -3,6 +3,12 @@
   --tree-ele-border-color: rgba(255, 255, 255, 0.8);
   --no-highlight-bg-color: rgba(0, 100, 255, 0.3);
   --highlight-bg-color: rgba(0, 100, 200, 0.5);
+  --font-family: monospace;
+}
+
+* {
+  font-family: var(--font-family);
+  font-size: 1rem;
 }
 
 html {
@@ -11,14 +17,37 @@ html {
 
 body {
   height: 100vh;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
 }
 
-body section {
+#tool-bar {
   grid-column: 1;
   grid-row: 1;
+}
+
+#tool-bar > ul {
+  list-style: none;
+}
+
+button {
+  background: var(--no-highlight-bg-color);
+  color: white;
+  padding: 1rem;
+  border: solid var(--tree-ele-border-thickness) transparent;
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: var(--highlight-bg-color);
+  border: solid var(--tree-ele-border-thickness) var(--tree-ele-border-color);
+}
+
+body section {
+  grid-column: 1;
+  grid-row: 2;
 }
 
 #tree-container {
@@ -35,9 +64,7 @@ body section {
   border-radius: 8px;
 
   color: white;
-  font-family: monospace;
-  font-size: 1rem;
-  
+
   cursor: pointer;
 
   transition: 0.25s;
