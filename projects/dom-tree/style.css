@@ -37,6 +37,8 @@ body section {
   color: white;
   font-family: monospace;
   font-size: 1rem;
+  
+  cursor: pointer;
 
   transition: 0.25s;
 }
