@@ -1,5 +1,14 @@
+
+Set.prototype.any = function (pred) {
+  for (let ele of this) {
+    if (pred(ele)) return true;
+  }
+  return false;
+};
+
 let ctx = {
-  selected: new Set([])
+  selected: new Set([]),
+  root: undefined
 }
 
 $(document).ready(() => {
@@ -10,9 +19,13 @@ $(document).ready(() => {
     ctx.selected = new Set([])
   })
 
-  let root =
+  const mergeBtn = $('#tool-bar button[name = "merge"]')
+  mergeBtn.on('click', mergeSelected)
+
+  ctx.root =
     vertical([
       horizontal([
+        circle(),
         horizontal([
           square(),
           circle()
@@ -31,3 +44,18 @@ $(document).ready(() => {
       ])
     ])
 })
+
+function mergeSelected() {
+  for (let parent of ctx.selected) {
+    for (let child of ctx.selected) {
+      if (child.parent().is(parent)) {
+        if ((child.hasClass('horizontal') && parent.hasClass('horizontal'))
+         || (child.hasClass('vertical') && parent.hasClass('vertical'))) {
+           let grandchildren = child.children('div')
+           child.replaceWith(grandchildren)
+           return
+        }
+      }
+    }
+  }
+}

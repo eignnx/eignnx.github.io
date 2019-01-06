@@ -1,11 +1,4 @@
 
-Set.prototype.any = function (pred) {
-  for (let ele of this) {
-    if (pred(ele)) return true;
-  }
-  return false;
-};
-
 function applyMouseEvents(selected) {
   selected
     .mouseover(domNodeMouseOver)
