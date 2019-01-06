@@ -1,13 +1,13 @@
 let ctx = {
-  selected: null
+  selected: new Set([])
 }
 
 $(document).ready(() => {
   $('html').click(function() {
-    if (ctx.selected) {
-      ctx.selected.removeClass('selected')
+    if (ctx.selected.size > 0) {
+      ctx.selected.forEach(node => node.removeClass('selected'));
     }
-    ctx.selected = null;
+    ctx.selected = new Set([])
   })
 
   let root =

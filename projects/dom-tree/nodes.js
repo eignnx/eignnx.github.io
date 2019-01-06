@@ -1,36 +1,44 @@
 
+Set.prototype.any = function (pred) {
+  for (let ele of this) {
+    if (pred(ele)) return true;
+  }
+  return false;
+};
+
 function applyMouseEvents(selected) {
   selected
-    .mouseover(function(e) {
-      e.stopPropagation()
-      const parent = $(this).parent()
-      if (!parent.is('#tree-container')) {
-        parent.removeClass('tree-ele-highlight')
-        parent.addClass('tree-ele-no-highlight')
-      }
-      $(this).addClass('tree-ele-highlight')
-      $(this).removeClass('tree-ele-no-highlight')
-    })
-    .mouseout(function() {
-      $(this).addClass('tree-ele-no-highlight')
-      $(this).removeClass('tree-ele-highlight')
-    })
-    .click(function(e) {
-      e.stopPropagation()
+    .mouseover(domNodeMouseOver)
+    .mouseout(domNodeMouseOut)
+    .click(domNodeOnClick)
+}
 
-      // Deselect if background is clicked, or if the selected item is clicked.
-      if (ctx.selected) {
-        if (ctx.selected.is($(this))) {
-          ctx.selected.removeClass('selected')
-          ctx.selected = null;
-        } else {
-          ctx.selected.removeClass('selected')
-          ctx.selected = $(this).addClass('selected')
-        }
-      } else {
-        ctx.selected = $(this).addClass('selected')
-      }
-    })
+function domNodeMouseOver(e) {
+  e.stopPropagation()
+  const parent = $(this).parent()
+  if (!parent.is('#tree-container')) {
+    parent.removeClass('tree-ele-highlight')
+    parent.addClass('tree-ele-no-highlight')
+  }
+  $(this).addClass('tree-ele-highlight')
+  $(this).removeClass('tree-ele-no-highlight')
+}
+
+function domNodeMouseOut() {
+  $(this).addClass('tree-ele-no-highlight')
+  $(this).removeClass('tree-ele-highlight')
+}
+
+function domNodeOnClick(e) {
+  e.stopPropagation()
+
+  if (ctx.selected.any(dom => $(this).is(dom))) {
+    ctx.selected.delete($(this))
+    $(this).removeClass('selected')
+  } else {
+    ctx.selected.add($(this))
+    $(this).addClass('selected')
+  }
 }
 
 function atom() {
