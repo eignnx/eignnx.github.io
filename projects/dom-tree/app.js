@@ -28,6 +28,9 @@ $(document).ready(() => {
   const mergeBtn = $('button[name = "merge"]')
   mergeBtn.on('click', mergeSelected)
 
+  const unwrapBtn = $('button[name = "unwrap"]')
+  unwrapBtn.on('click', unwrapSelected)
+
   const surroundHorizontallyBtn = $('button[name = "surround-horizontal"]')
   surroundHorizontallyBtn.on('click', surroundHorizontally)
 
@@ -83,6 +86,20 @@ function surroundHorizontally(e) {
       let cloned = dom.clone()
       applyMouseEventsRec(cloned)
       dom.replaceWith(horizontal([cloned]))
+    })
+  })
+}
+
+function unwrapSelected(e) {
+  e.stopPropagation()
+
+  thenClearSelected(() => {
+    ctx.selected.forEach(dom => {
+      if (dom.children('div').length == 1) {
+        let cloned = dom.children('div').clone()
+        applyMouseEventsRec(cloned)
+        dom.replaceWith(cloned)
+      }
     })
   })
 }
