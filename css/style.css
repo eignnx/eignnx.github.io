@@ -1,11 +1,12 @@
 :root {
   --bg-color: #ecf;
   --headline-font: 'Bree Serif', serif;
-  --body-font: 'Bitter', serif;
+  --body-font: 'Bree Serif', serif;
 }
 
 p {
   font-family: var(--body-font);
+  font-size: 14pt;
 }
 
 a {
