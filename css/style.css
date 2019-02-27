@@ -19,7 +19,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  text-align: center;
+  /* text-align: center; */
   font-family: var(--headline-font);
 }
 
@@ -29,24 +29,37 @@ body {
 
 header {
   margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+main {
+  margin: 0rem 10vw;
+}
+
+section {
+  margin-bottom: 5rem;
 }
 
 #site-title {
+  text-align: center;
   font-size: 5vw;
   font-style: normal;
 }
 
+#project-section {
+}
+
 #project-grid {
-  padding: 5rem;
+  /* padding: 5rem; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-gap: 3rem;
+  grid-gap: 5rem;
 }
 
 .project-grid-item {
   /* border: solid;
   border-radius: 3px; */
-  padding: 1rem;
+  /* padding: 1rem; */
 
   display: block;
 }
@@ -55,7 +68,7 @@ header {
   text-decoration: none;
 }
 
-.has-demo > h2 > a::after {
+.has-demo > h3 > a::after {
   content: "DEMO";
   padding: 0.4rem 0.5rem;
   margin: 0.5rem;
