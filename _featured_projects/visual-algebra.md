@@ -1,5 +1,6 @@
 ---
 title: "Visual Algebra"
+rank: 300
 link_url: "https://github.com/visualAlgebra/cmpsc488"
 tags:
   - "Vue"

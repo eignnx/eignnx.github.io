@@ -1,5 +1,6 @@
 ---
 title: "min-chat"
+rank: 30
 link_url: "https://github.com/eignnx/min-chat"
 tags:
   - "Rust"

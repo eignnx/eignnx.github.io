@@ -1,5 +1,6 @@
 ---
 title: "m-o"
+rank: 1000
 link_url: "https://github.com/eignnx/m-o"
 tags:
   - "Rust"

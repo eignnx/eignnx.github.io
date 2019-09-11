@@ -1,5 +1,6 @@
 ---
 title: "dedupe"
+rank: 150
 link_url: "https://github.com/eignnx/dedupe"
 tags:
   - "Python3"
