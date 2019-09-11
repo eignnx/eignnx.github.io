@@ -1,0 +1,19 @@
+
+<section id="project-section">
+  <h2>Projects</h2>
+  <div id="project-grid">
+
+    {% for project in site.featured_projects %}
+      <article class="project-grid-item">
+        <h3><a href="{{ project.link_url }}">{{ project.title }}</a></h3>
+        <p>{{ project.content }}</p>
+        <span class="tags">
+          {% for tag in project.tags %}
+            <a class="tag" href="#">{{ tag }}</a>
+          {% endfor %}
+        </span>
+      </article>
+    {% endfor %}
+
+  </div>
+</section>

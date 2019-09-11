@@ -1,2 +1,5 @@
 name: eignnx.github.io
 markdown: kramdown
+
+collections:
+  - featured_projects

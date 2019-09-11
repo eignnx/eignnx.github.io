@@ -1,0 +1,8 @@
+- name: "Python 3"
+- name: "Rust"
+- name: "Javascript"
+- name: "C"
+- name: "ReasonML"
+- name: "x86 Assembly"
+- name: "Vue"
+- name: "Java"
