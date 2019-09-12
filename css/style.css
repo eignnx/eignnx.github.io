@@ -54,7 +54,8 @@ section {
 #skills-section ul {
   display: flex;
   overflow: hidden;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 #skills-section li {
@@ -80,9 +81,9 @@ section {
 }
 
 .project-grid-item {
-  /* border: solid;
-  border-radius: 3px; */
-  /* padding: 1rem; */
+  border: solid;
+  border-radius: 3px;
+  padding: 1rem;
 
   display: block;
 }
