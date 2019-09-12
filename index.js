@@ -1,17 +1,19 @@
 
 let canvas;
-let pens = new Set([]);
+let pens;
 
 const MIN_PENS = 4;
 const MAX_PENS = 6;
 
 function windowResized() {
+  clear();
   resizeCanvas(windowWidth, windowHeight);
   regenerate();
 }
 
 
 function regenerate() {
+  pens = new Set([]);
   let max_pens = floor(random(MIN_PENS, MAX_PENS));
   for (let i = 0; i < max_pens; i++) {
     const pos = createVector(random(width), random(height));
