@@ -10,17 +10,14 @@
         other_a.classList.remove("highlighted");
       }, 3000);
     }
-
-    function reveal(id) {
-      const elem = document.getElementById(id);
-
-    }
   </script>
 
     {% assign sorted_featured_projects = (site.featured_projects | sort: "rank" | reverse) %}
     {% for project in sorted_featured_projects %}
       <article class="project-grid-item">
-        <h3 id="{{ project.title }}"><a href="{{ project.link_url }}">{{ project.title }}</a></h3>
+        <h3 id="{{ project.title }}">
+          <a href="{{ project.link_url }}">{{ project.title }}</a>
+        </h3>
         
         <p>{{ project.content }}</p>
 
