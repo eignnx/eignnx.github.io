@@ -127,11 +127,11 @@ section {
 
 @keyframes jiggle {
   to {
-    transform: skew(0) scale(1.01);
+    transform: skew(0) scale(1.01) rotate(-0.5deg);
   }
   
   from {
-    transform: skew(1deg) scale(1);
+    transform: skew(1deg) scale(1) rotate(0.5deg);
   }
 }
 
@@ -192,4 +192,32 @@ footer {
 /* The `.fab` class icons get replaced with svgs which have this class. */
 .svg-inline--fa {
   animation: spin-a-bit 0.5s ease-in-out infinite alternate;
+}
+
+.highlighted::after {
+  content: "👈";
+  margin-left: 1rem;
+}
+
+.highlighted {
+  animation: pop-in 1s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); /* overshoot */
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(5);
+  }
+
+  45% {
+    transform: scale(0.9)
+  }
+
+  65% {
+    transform: scale(1.1)
+  }
+
+  to {
+    transform: scale(1)
+  }
 }
