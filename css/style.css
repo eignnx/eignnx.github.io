@@ -151,6 +151,7 @@ section {
   color: white;
   font-family: var(--headline-font);
   font-size: 10pt;
+  font-weight: bolder;
 }
 
 .tag:hover {
