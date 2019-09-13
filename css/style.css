@@ -144,7 +144,7 @@ section {
   flex-wrap: wrap;
 }
 
-.tag {
+details > summary {
   margin: 0.2rem;
   padding: 0.3rem;
   padding-top: 0.2rem;
@@ -157,6 +157,24 @@ section {
   font-family: var(--headline-font);
   font-size: 10pt;
   font-weight: bolder;
+}
+
+details ul {
+  margin: 0;
+}
+
+details li {
+  text-align: left;
+  margin-left: -1rem;
+  font-family: var(--headline-font);
+  font-weight: bolder;
+}
+
+details[open] {
+  background-color: transparent;
+  color: black;
+  border: 3px solid black;
+  border-radius: 3px;
 }
 
 .tag:hover {
