@@ -86,25 +86,22 @@ section {
     font-size: calc(var(--font-size) * 1.2);
 }
 
-#skills-section ul {
+#skills-section > ul {
   display: flex;
   overflow: hidden;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   padding: 0;
   padding-top: 4rem;
 }
 
-#skills-section li {
-  font-family: var(--headline-font);
-  margin: 0.1rem;
-  padding: 0.75rem 1rem;
-  font-weight: bolder;
+#skills-section > ul > li {
+  list-style: none; /* Top-level tags don't need bullets */
+  /* margin: 0.05rem; */
+  padding: 0.75rem 0.5rem;
   flex-wrap: wrap;
-  list-style: none;
-  border-radius: 3px;
-  background-color: black;
-  color: white;
+
+  font-size: larger;
 
   animation: pulse-text 2s ease-in-out infinite alternate;
 }
@@ -155,7 +152,6 @@ details > summary {
   background-color: black;
   color: white;
   font-family: var(--headline-font);
-  font-size: 10pt;
   font-weight: bolder;
 }
 
@@ -168,6 +164,7 @@ details li {
   margin-left: -1rem;
   font-family: var(--headline-font);
   font-weight: bolder;
+  list-style: disc;
 }
 
 details[open] {
@@ -175,6 +172,7 @@ details[open] {
   color: black;
   border: 3px solid black;
   border-radius: 3px;
+  padding: 0.3rem;
 }
 
 .tag:hover {

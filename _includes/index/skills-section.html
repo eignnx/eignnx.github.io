@@ -2,7 +2,33 @@
   <h2>Technologies</h2>
   <ul>
     {% for skill in site.data.skills %}
-      <li>{{ skill.name }}</li>
+      <li>
+        <details>
+          <summary>{{ skill.name }}</summary>
+          <ul>
+              {% for entry in site.data.project_tags %}
+                {% if entry.names contains skill.name %}
+                  {% for synonym in entry.names %}
+                    {% for other_project in site.featured_projects %}
+                      {% if other_project.title != project.title  %}
+                        {% for other_tag in other_project.tags %}
+                          {% if other_tag == synonym %}
+                            <li>
+                              <a
+                                href="#{{other_project.title}}"
+                                onclick="callout('{{other_project.title}}')"
+                              >{{ other_project.title }}</a>
+                            </li>
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+          </ul>
+        </details>
+      </li>
     {% endfor %}
   </ul>
 </section>
