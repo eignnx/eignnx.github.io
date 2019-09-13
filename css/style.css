@@ -68,6 +68,18 @@ section {
   text-align: center;
   font-size: 5vw;
   font-style: normal;
+
+  animation: pulse-text 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-text {
+  to {
+    transform: scale(1.05);
+  }
+
+  from {
+    transform: scale(1);
+  }
 }
 
 #intro-section p {
@@ -93,13 +105,11 @@ section {
   border-radius: 3px;
   background-color: black;
   color: white;
-}
 
-#project-section {
+  animation: pulse-text 2s ease-in-out infinite alternate;
 }
 
 #project-grid {
-  /* padding: 1rem; */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
   grid-gap: 5rem;
@@ -111,27 +121,22 @@ section {
   padding: 1rem;
 
   display: block;
+
+  animation: jiggle 2s infinite alternate ease-in-out;
+}
+
+@keyframes jiggle {
+  to {
+    transform: skew(0) scale(1.01);
+  }
+  
+  from {
+    transform: skew(1deg) scale(1);
+  }
 }
 
 .project-grid-item:hover {
   text-decoration: none;
-}
-
-.has-demo > h3 > a::after {
-  content: "DEMO";
-  padding: 0.4rem 0.5rem;
-  margin: 0.5rem;
-
-  position: relative;
-  bottom: 0.25rem;
-
-  border-radius: 1rem;
-  background-color: black;
-  color: white;
-
-  font-family: var(--headline-font);
-  font-weight: bold;
-  font-size: 8pt;
 }
 
 .tags {
@@ -156,11 +161,24 @@ section {
 
 .tag:hover {
   text-decoration: none;
+
+  animation: spin-a-bit 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes spin-a-bit {
+  to {
+    transform: rotate(0deg) scale(1.0);
+  }
+
+  from {
+    transform: rotate(-3deg) scale(1.04);
+  }
 }
 
 footer {
-  /* border-top: solid; */
-
   margin-top: 2rem;
   padding: 2rem;
 
@@ -169,4 +187,9 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+/* The `.fab` class icons get replaced with svgs which have this class. */
+.svg-inline--fa {
+  animation: spin-a-bit 0.5s ease-in-out infinite alternate;
 }
