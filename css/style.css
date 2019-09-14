@@ -15,6 +15,11 @@ a {
   text-decoration: inherit;
 }
 
+h3 > a::after {
+  content: "🔗";
+  margin-left: 0.5rem;
+}
+
 a:hover {
   text-decoration: underline;
 }
