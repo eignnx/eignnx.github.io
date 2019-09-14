@@ -4,7 +4,7 @@ rank: 200
 link_url: "https://github.com/eignnx/misp"
 tags:
   - "Python3.6"
-  - "LISP"
+  - "Scheme"
   - "language"
   - "interpreter"
 ---

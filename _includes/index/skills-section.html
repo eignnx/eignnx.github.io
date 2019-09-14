@@ -4,10 +4,10 @@
     {% for skill in site.data.skills %}
       <li>
         <details>
-          <summary>{{ skill.name }}</summary>
-          <ul>
               {% for entry in site.data.project_tags %}
                 {% if entry.names contains skill.name %}
+                  <summary title="{{entry.more}}">{{ skill.name }}</summary>
+                  <ul>
                   {% for synonym in entry.names %}
                     {% for other_project in site.featured_projects %}
                       {% if other_project.title != project.title  %}
@@ -24,9 +24,9 @@
                       {% endif %}
                     {% endfor %}
                   {% endfor %}
+                  </ul>
                 {% endif %}
               {% endfor %}
-          </ul>
         </details>
       </li>
     {% endfor %}

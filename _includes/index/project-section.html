@@ -24,10 +24,10 @@
         <span class="tags">
           {% for tag in project.tags %}
             <details class="tag">
-              <summary>{{ tag }}</summary>
-              <ul>
                   {% for entry in site.data.project_tags %}
                     {% if entry.names contains tag %}
+                      <summary title="{{entry.more}}">{{ tag }}</summary>
+                      <ul>
                       {% for synonym in entry.names %}
                         {% for other_project in site.featured_projects %}
                           {% if other_project.title != project.title  %}
@@ -44,9 +44,9 @@
                           {% endif %}
                         {% endfor %}
                       {% endfor %}
+                      </ul>
                     {% endif %}
                   {% endfor %}
-              </ul>
             </details>
           {% endfor %}
         </span>

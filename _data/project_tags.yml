@@ -1,20 +1,42 @@
 - names: ["Rust"]
+  more: "systems programming language backed by Mozilla and with a focus on safety"
 - names: ["Python3.7", "Python3.6", "Python 3", "Python3"]
+  more:  "high-level interpreted programming language with a focus on code readablility"
 - names: ["CLI tool", "CLI Tool"]
+  more: "tool used through a command line interface (terminal)"
 - names: ["nom"]
+  more: "performant nearly-zero-copy parser combinator library for the Rust programming language"
 - names: ["x86-64", "x86 Assembly"]
+  more: "instruction set architecture of intel CPUs"
 - names: ["compiler"]
+  more: "translates from one programming language to another"
 - names: ["type system"]
+  more: "system for proving properties about code at compile-time"
 - names: ["language"]
+  more: "programming language"
 - names: ["ReasonML"]
+  more: "programming language based heavily on OCaml but having Javascript-like syntax, and compiling to Javascript"
 - names: ["Prolog"]
+  more: "logic programming language based on declarative rules and query solving"
 - names: ["Javascript"]
+  more: "high-level interpreted programming lanuage built into web browsers"
 - names: ["interpreter"]
+  more: "program which executes high-level code"
 - names: ["Vue"]
+  more: "front-end web framework for Javascript"
 - names: ["group project"]
+  more: "created in collaboration with peers"
 - names: ["Webpack"]
-- names: ["LISP"]
+  more: "dependency manager, bundler, and transpiler for Javascript projects"
+- names: ["Scheme"]
+  more: "high-level programming language built around the idea of homoiconicity"
 - names: ["systems programming"]
+  more: "field of software development focused on performance and interaction with low-level systems"
 - names: ["file system"]
+  more: "interacts with the operating system's file system"
 - names: ["C"]
+  more: "low-level programming language used as a lingua franca by higher-level languages and for systems programming"
 - names: ["server"]
+  more: "serves content via the internet"
+- names: ["Java"]
+  more: "object oriented, staticly typed, imperative programming language"
