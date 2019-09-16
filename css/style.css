@@ -5,23 +5,15 @@
   --font-size: 14pt;
 }
 
+* {
+  /* Bigger focus outlines */
+  outline-width: 0.2rem;
+  outline-offset: 0.05rem;
+}
+
 p {
   font-family: var(--body-font);
   font-size: var(--font-size);
-}
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-h3 > a::after {
-  content: "🔗";
-  margin-left: 0.5rem;
-}
-
-a:hover {
-  text-decoration: underline;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -102,7 +94,6 @@ section {
 
 #skills-section > ul > li {
   list-style: none; /* Top-level tags don't need bullets */
-  /* margin: 0.05rem; */
   padding: 0.75rem 0.5rem;
   flex-wrap: wrap;
 
@@ -146,6 +137,32 @@ section {
   flex-wrap: wrap;
 }
 
+/* 
+  A details-tag is:
+
+    <details>
+      <summary> {{ summary text here}} </summary>
+      <ul>
+        <li><a href="...">{{ link text here }}</a></li>
+        <li><a href="...">{{ link text here }}</a></li>
+        <li><a href="...">{{ link text here }}</a></li>
+      </ul>
+    </details>
+ */
+
+details > summary:focus {
+  /* Even though font color is white, focus using black b/c outline is outside the details box */
+  outline-color: black;
+}
+
+details[open] {
+  background-color: transparent;
+  color: black;
+  border: 3px solid black;
+  border-radius: 3px;
+  padding: 0.3rem;
+}
+
 details > summary {
   margin: 0.2rem;
   padding: 0.3rem;
@@ -160,24 +177,16 @@ details > summary {
   font-weight: bolder;
 }
 
-details ul {
+details > ul {
   margin: 0;
 }
 
-details li {
+details > ul > li {
   text-align: left;
   margin-left: -1rem;
   font-family: var(--headline-font);
   font-weight: bolder;
   list-style: disc;
-}
-
-details[open] {
-  background-color: transparent;
-  color: black;
-  border: 3px solid black;
-  border-radius: 3px;
-  padding: 0.3rem;
 }
 
 .tag:hover {
