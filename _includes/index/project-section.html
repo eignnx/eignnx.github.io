@@ -1,17 +1,7 @@
 
 <section id="project-section">
-  <h2>🏗️ Projects</h2>
+  <h2>🏗️ My Projects</h2>
   <div id="project-grid">
-  <script>
-    function callout(id) {
-      const other_a = document.getElementById(id);
-      other_a.classList.add("highlighted");
-      setTimeout(() => {
-        other_a.classList.remove("highlighted");
-      }, 3000);
-    }
-  </script>
-
     {% assign sorted_featured_projects = (site.featured_projects | sort: "rank" | reverse) %}
     {% for project in sorted_featured_projects %}
       <article class="project-grid-item">

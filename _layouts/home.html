@@ -31,5 +31,15 @@
         <a href="https://github.com/eignnx" aria-label="github"><i class="fab fa-github-alt"></i></a>!
       </h2>
     </footer>
+
+    <script>
+      function callout(id) {
+        const other_a = document.getElementById(id);
+        other_a.classList.add("highlighted");
+        setTimeout(() => {
+          other_a.classList.remove("highlighted");
+        }, 3000);
+      }
+    </script>
   </body>
 </html>
