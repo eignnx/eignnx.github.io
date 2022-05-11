@@ -40,3 +40,9 @@
   more: "serves content via the internet"
 - names: ["Java"]
   more: "object oriented, staticly typed, imperative programming language"
+- names: ["Tutorial"]
+  more: "educational content"
+- names: ["YouTube"]
+  more: "content created for my YouTube channel"
+- names: ["FP", "Functional Programming"]
+  more: "programming paradigm which uses primarily pure functions"
