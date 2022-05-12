@@ -56,3 +56,5 @@
   more: "compositional way of building parsers"
 - names: ["coroutines"]
   more: "pauseable and resumable functions"
+- names: ["self-hosted", "boostrapped", "boostrappable"]
+  more: "language defined in terms of itself"
