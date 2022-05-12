@@ -12,7 +12,6 @@
 }
 
 #canvas-container {
-  margin-top: -100vh;
   display: flex;
 
   /* This centers our sketch horizontally. */
