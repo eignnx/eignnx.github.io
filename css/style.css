@@ -11,7 +11,7 @@
   outline-offset: 0.05em;
 }
 
-html, body, #canvas-container {
+html, body {
   height: 100%;
 }
 
@@ -24,6 +24,9 @@ html, body, #canvas-container {
 
   /* This centers our sketch vertically. */
   align-items: center;
+  
+  position: sticky;
+  top: 0;
 }
 
 .p5Canvas {
