@@ -48,3 +48,5 @@
   more: "programming paradigm which uses primarily pure functions"
 - names: ["Haskell"]
   more: "strongly typed, pure, lazy, functional programming language"
+- names: ["Netlify"]
+  more: "web hosting service"
