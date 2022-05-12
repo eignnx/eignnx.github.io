@@ -22,7 +22,7 @@
   more: "high-level interpreted programming lanuage built into web browsers"
 - names: ["interpreter"]
   more: "program which executes high-level code"
-- names: ["Vue"]
+- names: ["Vue", "Vue.js"]
   more: "front-end web framework for Javascript"
 - names: ["group project"]
   more: "created in collaboration with peers"
