@@ -46,3 +46,5 @@
   more: "content created for my YouTube channel"
 - names: ["FP", "Functional Programming"]
   more: "programming paradigm which uses primarily pure functions"
+- names: ["Haskell"]
+  more: "strongly typed, pure, lazy, functional programming language"
