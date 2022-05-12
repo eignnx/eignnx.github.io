@@ -5,6 +5,8 @@ let pens;
 const MIN_PENS = 4;
 const MAX_PENS = 6;
 
+const CANVAS_CONTAINER_ID = "canvas-container";
+
 function windowResized() {
   clear();
   resizeCanvas(windowWidth, windowHeight);
@@ -23,6 +25,7 @@ function regenerate() {
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
+  canvas.parent(CANVAS_CONTAINER_ID);
   regenerate();
 }
 
