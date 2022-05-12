@@ -11,11 +11,11 @@
   outline-offset: 0.05em;
 }
 
-html, body {
+html, body, #canvas-container {
   height: 100%;
 }
 
-body {
+#canvas-container {
   margin: 0;
   display: flex;
 
@@ -26,7 +26,7 @@ body {
   align-items: center;
 }
 
-canvas {
+.p5Canvas {
   display: block;
   z-index: -1;
 }
