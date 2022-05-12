@@ -23,11 +23,12 @@
   
   position: sticky;
   top: 0;
+  
+  z-index: -100;
 }
 
 .p5Canvas {
   display: block;
-  z-index: -1;
 }
 
 p, li {
