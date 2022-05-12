@@ -52,3 +52,7 @@
   more: "web hosting service"
 - names: ["WASM", "WebAssembly"]
   more: "binary instruction format for a stack-based virtual machine"
+- names: ["parser combinators"]
+  more: "compositional way of building parsers"
+- names: ["coroutines"]
+  more: "pauseable and resumable functions"
