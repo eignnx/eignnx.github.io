@@ -50,3 +50,5 @@
   more: "strongly typed, pure, lazy, functional programming language"
 - names: ["Netlify"]
   more: "web hosting service"
+- names: ["WASM", "WebAssembly"]
+  more: "binary instruction format for a stack-based virtual machine"
