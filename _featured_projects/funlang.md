@@ -1,5 +1,5 @@
 ---
-title: "fauxcaml"
+title: "funlang"
 rank: 1050
 link_url: "https://github.com/eignnx/funlang"
 tags:
