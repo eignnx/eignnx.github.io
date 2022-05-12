@@ -23,8 +23,6 @@ function regenerate() {
 
 function setup() {
   canvas = createCanvas(windowWidth, windowHeight);
-  canvas.style("z-index", "-1");
-  canvas.position(0, 0);
   regenerate();
 }
 
@@ -35,7 +33,6 @@ function draw() {
       pen.show();
     }
   }
-  canvas.position(0, window.scrollY);
 }
 
 function mouseClicked() {
