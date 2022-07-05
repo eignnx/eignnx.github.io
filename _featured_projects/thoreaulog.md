@@ -1,5 +1,6 @@
 ---
 title: "Thoreaulog"
+hidden: true
 rank: 500
 link_url: "https://github.com/eignnx/thoreaulog/"
 tags:

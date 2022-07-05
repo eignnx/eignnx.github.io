@@ -9,15 +9,15 @@
                   <summary title="{{entry.more}}">{{ skill.name }}</summary>
                   <ul>
                   {% for synonym in entry.names %}
-                    {% for other_project in site.featured_projects %}
-                      {% if other_project.title != project.title  %}
-                        {% for other_tag in other_project.tags %}
-                          {% if other_tag == synonym %}
+                    {% for project in site.featured_projects %}
+                      {% if project.hidden == nil or project.hidden == false  %}
+                        {% for tag in project.tags %}
+                          {% if tag == synonym %}
                             <li>
                               <a
-                                href="#{{other_project.title}}"
-                                onclick="callout('{{other_project.title}}')"
-                              >{{ other_project.title }}</a>
+                                href="#{{project.title}}"
+                                onclick="callout('{{ project.title }}')"
+                              >{{ project.title }}</a>
                             </li>
                           {% endif %}
                         {% endfor %}

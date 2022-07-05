@@ -5,3 +5,6 @@ markdown: kramdown
 
 collections:
   - featured_projects
+
+liquid:
+  error_mode: strict

@@ -58,3 +58,9 @@
   more: "pauseable and resumable functions"
 - names: ["self-hosted", "boostrapped", "boostrappable"]
   more: "language defined in terms of itself"
+- names: ["P5.js", "p5", "p5.js"]
+  more: "JavaScript library for creative coding"
+- names: ["Html", "HTML"]
+  more: "standard markup language for documents designed to be displayed in a web browser"
+- names: ["CSS", "Css", "css"]
+  more: " style sheet language used for describing the presentation of a document"

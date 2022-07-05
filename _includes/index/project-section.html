@@ -1,46 +1,44 @@
-
 <section id="project-section">
   <h2>🏗️ My Projects</h2>
   <div id="project-grid">
-    {% assign sorted_featured_projects = (site.featured_projects | sort: "rank" | reverse) %}
+    {% assign sorted_featured_projects = site.featured_projects | sort: "rank" | reverse %}
     {% for project in sorted_featured_projects %}
-      <article class="project-grid-item">
-        <h3 id="{{ project.title }}">
-          <a href="{{ project.link_url }}">{{ project.title }}</a>
-        </h3>
-        
-        <p>{{ project.content }}</p>
+    {% unless project.hidden %}
+    <article class="project-grid-item">
+      <h3 id="{{ project.title }}">
+        <a href="{{ project.link_url }}">{{ project.title }}</a>
+      </h3>
 
-        <span class="tags">
-          {% for tag in project.tags %}
-            <details class="tag">
-                  {% for entry in site.data.project_tags %}
-                    {% if entry.names contains tag %}
-                      <summary title="{{entry.more}}">{{ tag }}</summary>
-                      <ul>
-                      {% for synonym in entry.names %}
-                        {% for other_project in site.featured_projects %}
-                          {% if other_project.title != project.title  %}
-                            {% for other_tag in other_project.tags %}
-                              {% if other_tag == synonym %}
-                                <li>
-                                  <a
-                                    href="#{{other_project.title}}"
-                                    onclick="callout('{{other_project.title}}')"
-                                  >{{ other_project.title }}</a>
-                                </li>
-                              {% endif %}
-                            {% endfor %}
-                          {% endif %}
-                        {% endfor %}
-                      {% endfor %}
-                      </ul>
-                    {% endif %}
-                  {% endfor %}
-            </details>
+      <p>{{ project.content }}</p>
+
+      <span class="tags">
+        {% for tag in project.tags %}
+        <details class="tag">
+          {% for entry in site.data.project_tags %}
+          {% if entry.names contains tag %}
+          <summary title="{{entry.more}}">{{ tag }}</summary>
+          <ul>
+            {% for synonym in entry.names %}
+            {% for other_project in site.featured_projects %}
+            {% if other_project.title != project.title %}
+            {% for other_tag in other_project.tags %}
+            {% if other_tag == synonym %}
+            <li>
+              <a href="#{{other_project.title}}" onclick="callout('{{other_project.title}}')">{{ other_project.title }}</a>
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+          </ul>
+          {% endif %}
           {% endfor %}
-        </span>
-      </article>
+        </details>
+        {% endfor %}
+      </span>
+    </article>
+    {% endunless %}
     {% endfor %}
 
   </div>
