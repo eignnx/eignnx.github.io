@@ -1,7 +1,7 @@
-
 ---
 title: "all-sorts-of-fun"
-rank: 1075
+rank: 1025
+demo: true
 link_url: "https://All-Sorts-of-Fun.eignnx.repl.co"
 tags:
   - "Vue.js"
@@ -10,4 +10,4 @@ tags:
   - "CSS"
   - "P5.js"
 ---
-asdfa sdfasdf afdsfasdfa
+A sorting algorithm visualization which attempts to track cache misses!

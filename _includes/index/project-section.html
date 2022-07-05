@@ -5,7 +5,12 @@
     {% for project in sorted_featured_projects %}
     {% unless project.hidden %}
     <article class="project-grid-item">
-      <h3 id="{{ project.title }}">
+      <h3
+        id="{{ project.title }}"
+        {% if project.demo %}
+        class="demo"
+        {% endif %}
+      >
         <a href="{{ project.link_url }}">{{ project.title }}</a>
       </h3>
 
