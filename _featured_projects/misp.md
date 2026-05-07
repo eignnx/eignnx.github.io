@@ -3,6 +3,8 @@ title: "misp"
 hidden: true
 rank: 200
 link_url: "https://github.com/eignnx/misp"
+classes:
+  - monospace
 tags:
   - "Python"
   - "Scheme"

@@ -124,18 +124,16 @@ section {
 }
 
 #skills-section>ul>li {
-  list-style: none;
-  /* Top-level tags don't need bullets */
-  padding: 0.75rem 0.5rem;
+  list-style: none; /* Top-level tags don't need bullets */
   flex-wrap: wrap;
 
-  animation: pulse-text 2s ease-in-out infinite alternate;
+  /*animation: pulse-text 2s ease-in-out infinite alternate;*/
 }
 
 #project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-  grid-gap: 5rem;
+  grid-gap: 3rem;
 }
 
 .project-grid-item {
@@ -148,6 +146,10 @@ section {
   background: radial-gradient(circle,rgba(238, 174, 231, 0.39) 0%, rgba(134, 186, 247, 0.28) 100%)
 
   /*animation: jiggle 2s infinite alternate ease-in-out;*/
+
+}
+.project-grid-item .monospace a {
+  font-size: larger;
 }
 
 .project-grid-item .demo::after {
@@ -197,6 +199,8 @@ section {
   -moz-box-shadow: 0px 0px 21px 7px var(--faded-white);
   box-shadow: 0px 0px 21px 7px var(--faded-white);
 
+  display: inline-block;
+  animation: spin-a-bit 0.5s infinite alternate ease-in-out;
 }
 
 h3.foss-contribution {
@@ -240,50 +244,70 @@ details>summary:focus {
   outline-color: black;
 }
 
+details {
+  height: fit-content;
+}
+
+/*
 details[open] {
   background-color: transparent;
   color: black;
   border: 3px solid black;
   border-radius: 3px;
 }
+*/
 
-summary.empty::marker {
-    content: " ";
+details:has(.tag) {
+  border: solid 3px black;
+}
+
+.tag-outer {
+  margin: 0.5rem;
+  border-radius: 3px;
 }
 
 .tag {
-  margin: 0.5rem;
   padding: 0.4rem;
-  border: solid 3px black;
-  border-radius: 3px;
-  background-color: black;
   color: white;
   font-family: var(--headline-font);
   font-weight: bolder;
+  background-color: black;
 }
 
 .tag-no-linked-projects {
-    height: fit-content;
+  height: fit-content;
 }
 
 details>summary {
-  margin-top: -3px;
   padding-top: 0.2rem;
+  margin-top: -3px;
+  padding: 0.4rem;
+}
+
+details[open] {
+  padding: 0;
+  background-color: transparent;
+
+  & summary {
+    background-color: black;
+  }
 }
 
 details>ul {
   margin-inline: 0.75rem;
+  padding-inline-start: 1rem; /* reset list indentation */
 }
 
 details>ul>li {
   text-align: left;
   margin-left: -1rem;
   font-family: var(--headline-font);
+  color: black;
   list-style-type: "/#";
   margin: 0.1rem;
 }
 
-.tag:hover {
+.tag-outer:hover:not([open]) {
   text-decoration: none;
 
   animation: spin-a-bit 0.5s;
@@ -320,7 +344,8 @@ footer {
 
 .highlighted::after {
   content: "👈";
-  margin-left: 1rem;
+  /*margin-right: 1rem;*/
+  position: relative;
 }
 
 .highlighted {

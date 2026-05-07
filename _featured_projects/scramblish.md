@@ -1,7 +1,8 @@
 ---
 title: "Scramblish"
 link_url: "https://github.com/eignnx/scramblish-elm"
-demo: true
+classes:
+  - demo
 rank: 1070
 tags:
   - "Elm"

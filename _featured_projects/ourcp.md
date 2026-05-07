@@ -2,6 +2,8 @@
 title: "ourcp"
 rank: 50
 link_url: "https://github.com/eignnx/CMPSC311-ourcp"
+classes:
+  - monospace
 tags:
   - "C"
   - "systems programming"

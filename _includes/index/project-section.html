@@ -7,16 +7,11 @@
     <article class="project-grid-item">
       <h3
         id="{{ project.title }}"
-        {% if project.demo %}
-        class="demo"
-        {% endif %}
-        {% if project.foss_contribution %}
-        class="foss-contribution"
-        {% endif %}
+        class="{{ project.classes | join: " " }}"
       >
         <a href="{{ project.link_url }}">{{ project.title }}</a>
       </h3>
-      {% if project.foss_contribution %}
+      {% if project.classes contains "foss-contribution" %}
       <a class="foss-main-project" href="{{project.foss_main_project_link}}">{{project.foss_main_project}}</a>
       <span class="foss-contribution-tag" title="contribution to existing open-source project">OSS CONTRIB.</span>
       {% endif %}
@@ -41,8 +36,8 @@
           {% assign tag_more = all_tags | find_exp: "e", "e.name == tag" | map: "more" %}
 
           {% unless other_titles.size == 0 %}
-          <details title="{{tag_more}}" class="tag">
-              <summary >{{ tag }}</summary>
+          <details title="{{tag_more}}" class="tag-outer">
+              <summary class="tag">{{ tag }}</summary>
               <ul>
                 {% for other_title in other_titles %}
                   <li>
@@ -55,7 +50,7 @@
               </ul>
           </details>
           {% else %}
-            <div title="{{tag_more}}" class="tag tag-no-linked-projects">{{ tag }}</div>
+            <div title="{{tag_more}}" class="tag tag-outer tag-no-linked-projects">{{ tag }}</div>
           {% endunless %}
         {% endfor %}
       </span>

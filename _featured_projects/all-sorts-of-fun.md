@@ -2,8 +2,9 @@
 title: "all-sorts-of-fun"
 rank: 1025
 hidden: true
-demo: true
 link_url: "https://All-Sorts-of-Fun.eignnx.repl.co"
+classes:
+  - monospace
 tags:
   - "Vue.js"
   - "JavaScript"

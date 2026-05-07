@@ -1,7 +1,8 @@
 ---
 title: "Prolog LSP Server"
 rank: 1100
-foss_contribution: true
+classes:
+  - foss-contribution
 foss_main_project: "jamesnvc/lsp_server"
 foss_main_project_link: "https://github.com/jamesnvc/lsp_server"
 link_url: "https://github.com/jamesnvc/lsp_server/commits/master/?author=eignnx"

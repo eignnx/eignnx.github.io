@@ -31,7 +31,7 @@
 - name: "JavaScript"
   more: "high-level interpreted programming lanuage built into web browsers"
 
-- nane: "TypeScript"
+- name: "TypeScript"
   more: "Programming language and superset of JavaScript"
 
 - name: "interpreter"

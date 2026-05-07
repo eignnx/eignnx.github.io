@@ -3,6 +3,8 @@ title: "dedupe"
 rank: 150
 hidden: true
 link_url: "https://github.com/eignnx/dedupe"
+classes:
+  - monospace
 tags:
   - "Python"
   - "systems programming"

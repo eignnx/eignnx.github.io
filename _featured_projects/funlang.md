@@ -2,6 +2,8 @@
 title: "funlang"
 rank: 1050
 link_url: "https://github.com/eignnx/funlang"
+classes:
+  - monospace
 tags:
   - "Haskell"
   - "Rust"
