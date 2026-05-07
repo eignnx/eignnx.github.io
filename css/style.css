@@ -145,12 +145,15 @@ section {
 
   display: block;
 
-  animation: jiggle 2s infinite alternate ease-in-out;
+  background: radial-gradient(circle,rgba(238, 174, 231, 0.39) 0%, rgba(134, 186, 247, 0.28) 100%)
+
+  /*animation: jiggle 2s infinite alternate ease-in-out;*/
 }
 
 .project-grid-item .demo::after {
   content: "DEMO!";
   font-size: 0.8rem;
+  font-family: var(--headline-font);
 
   color: black;
 
@@ -171,6 +174,33 @@ section {
   -moz-box-shadow: 0px 0px 21px 7px var(--faded-white);
   box-shadow: 0px 0px 21px 7px var(--faded-white);
 
+}
+
+.foss-contribution-tag {
+  content: "CONTRIBUTION";
+  font-size: 0.6rem;
+  font-family: var(--headline-font);
+  text-decoration: none;
+
+  color: black;
+
+  padding: 0.5ch;
+  border-radius: 1ch;
+  border: 0.5ch solid black;
+
+  position: relative;
+  left: 0.5rem;
+
+  --faded-white: rgba(255, 255, 255, 0.75);
+  background: var(--faded-white);
+  -webkit-box-shadow: 0px 0px 21px 7px var(--faded-white);
+  -moz-box-shadow: 0px 0px 21px 7px var(--faded-white);
+  box-shadow: 0px 0px 21px 7px var(--faded-white);
+
+}
+
+h3.foss-contribution {
+    margin-bottom: 0.1rem;
 }
 
 @keyframes jiggle {
@@ -215,15 +245,15 @@ details[open] {
   color: black;
   border: 3px solid black;
   border-radius: 3px;
-  padding: 0.3rem;
 }
 
-details>summary {
-  margin: 0.2rem;
-  padding: 0.3rem;
-  padding-top: 0.2rem;
-  text-align: center;
+summary.empty::marker {
+    content: " ";
+}
 
+.tag {
+  margin: 0.5rem;
+  padding: 0.4rem;
   border: solid 3px black;
   border-radius: 3px;
   background-color: black;
@@ -232,16 +262,25 @@ details>summary {
   font-weight: bolder;
 }
 
+.tag-no-linked-projects {
+    height: fit-content;
+}
+
+details>summary {
+  margin-top: -3px;
+  padding-top: 0.2rem;
+}
+
 details>ul {
-  margin: 0;
+  margin-inline: 0.75rem;
 }
 
 details>ul>li {
   text-align: left;
   margin-left: -1rem;
   font-family: var(--headline-font);
-  font-weight: bolder;
-  list-style: disc;
+  list-style-type: "/#";
+  margin: 0.1rem;
 }
 
 .tag:hover {

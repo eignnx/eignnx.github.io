@@ -1,11 +1,12 @@
 ---
 title: "all-sorts-of-fun"
 rank: 1025
+hidden: true
 demo: true
 link_url: "https://All-Sorts-of-Fun.eignnx.repl.co"
 tags:
   - "Vue.js"
-  - "Javascript"
+  - "JavaScript"
   - "HTML"
   - "CSS"
   - "P5.js"

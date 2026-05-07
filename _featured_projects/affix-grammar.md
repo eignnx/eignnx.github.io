@@ -5,8 +5,8 @@ demo: true
 link_url: "https://affix-grammar.netlify.app/"
 tags:
   - "Rust"
-  - "WASM"
-  - "language"
+  - "WebAssembly"
+  - "PL"
   - "Netlify"
   - "Vue.js"
 ---

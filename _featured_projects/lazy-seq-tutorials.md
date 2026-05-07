@@ -4,7 +4,7 @@ rank: 1100
 link_url: "https://youtube.com/playlist?list=PLu_CwZu-azIdwU3XfpDUXnT3g2sWaDQ1-"
 tags:
   - "ReasonML"
-  - "Tutorial"
+  - "tutorial"
   - "YouTube"
   - "Functional Programming"
 ---

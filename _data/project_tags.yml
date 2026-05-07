@@ -1,66 +1,122 @@
-- names: ["Rust"]
+- name: "Rust"
   more: "systems programming language backed by Mozilla and with a focus on safety"
-- names: ["Python3.7", "Python3.6", "Python 3", "Python3"]
+
+- name: "Python"
   more:  "high-level interpreted programming language with a focus on code readablility"
-- names: ["CLI tool", "CLI Tool"]
+
+- name: "CLI tool"
   more: "tool used through a command line interface (terminal)"
-- names: ["nom"]
+
+- name: "nom"
   more: "performant nearly-zero-copy parser combinator library for the Rust programming language"
-- names: ["x86-64", "x86 Assembly"]
+
+- name: "x86-64"
   more: "instruction set architecture of intel CPUs"
-- names: ["compiler"]
-  more: "translates from one programming language to another"
-- names: ["type system"]
+
+- name: "compiler"
+  more: "translates code from one programming language to another"
+
+- name: "type system"
   more: "system for proving properties about code at compile-time"
-- names: ["language"]
-  more: "programming language"
-- names: ["ReasonML"]
+
+- name: "PL"
+  more: "programming language for controlling a computer"
+
+- name: "ReasonML"
   more: "programming language based heavily on OCaml but having Javascript-like syntax, and compiling to Javascript"
-- names: ["Prolog"]
+
+- name: "Prolog"
   more: "logic programming language based on declarative rules and query solving"
-- names: ["Javascript"]
+
+- name: "JavaScript"
   more: "high-level interpreted programming lanuage built into web browsers"
-- names: ["interpreter"]
+
+- nane: "TypeScript"
+  more: "Programming language and superset of JavaScript"
+
+- name: "interpreter"
   more: "program which executes high-level code"
-- names: ["Vue", "Vue.js"]
+
+- name: "Vue.js"
   more: "front-end web framework for Javascript"
-- names: ["group project"]
-  more: "created in collaboration with peers"
-- names: ["Webpack"]
+
+- name: "group project"
+  more: "created in collaboration with student peers"
+
+- name: "Webpack"
   more: "dependency manager, bundler, and transpiler for Javascript projects"
-- names: ["Scheme"]
+
+- name: "Scheme"
   more: "high-level programming language built around the idea of homoiconicity"
-- names: ["systems programming"]
+
+- name: "systems programming"
   more: "field of software development focused on performance and interaction with low-level systems"
-- names: ["file system"]
+
+- name: "file system"
   more: "interacts with the operating system's file system"
-- names: ["C"]
+
+- name: "C"
   more: "low-level programming language used as a lingua franca by higher-level languages and for systems programming"
-- names: ["server"]
+
+- name: "server"
   more: "serves content via the internet"
-- names: ["Java"]
+
+- name: "Java"
   more: "object oriented, staticly typed, imperative programming language"
-- names: ["Tutorial"]
+
+- name: "tutorial"
   more: "educational content"
-- names: ["YouTube"]
+
+- name: "YouTube"
   more: "content created for my YouTube channel"
-- names: ["FP", "Functional Programming"]
-  more: "programming paradigm which uses primarily pure functions"
-- names: ["Haskell"]
+
+- name: "Functional Programming"
+  more: "programming paradigm based on applying and composing functions"
+
+- name: "Haskell"
   more: "strongly typed, pure, lazy, functional programming language"
-- names: ["Netlify"]
+
+- name: "Netlify"
   more: "web hosting service"
-- names: ["WASM", "WebAssembly"]
+
+- name: "WebAssembly"
   more: "binary instruction format for a stack-based virtual machine"
-- names: ["parser combinators"]
+
+- name: "parser combinators"
   more: "compositional way of building parsers"
-- names: ["coroutines"]
+
+- name: "coroutines"
   more: "pauseable and resumable functions"
-- names: ["self-hosted", "boostrapped", "boostrappable"]
-  more: "language defined in terms of itself"
-- names: ["P5.js", "p5", "p5.js"]
+
+- name: "self-hosted"
+  more: "Software that can produce new versions of itself"
+
+- name: "P5.js"
   more: "JavaScript library for creative coding"
-- names: ["Html", "HTML"]
+
+- name: "HTML"
   more: "standard markup language for documents designed to be displayed in a web browser"
-- names: ["CSS", "Css", "css"]
-  more: " style sheet language used for describing the presentation of a document"
+
+- name: "CSS"
+  more: "style sheet language used for describing the presentation of a document"
+
+- name: "linguistics"
+  more: "scientific study of languages"
+
+- name: "Elm"
+  more: "domain-specific programming language for declaratively creating web browser-based GUIs"
+
+- name: "ReactJs"
+  more: "JavaScript library for building user interfaces"
+
+- name: "Github Pages"
+  more: "static site hosting service"
+
+- name: "game"
+  more: "electronic game with user interface and visual feedback"
+
+- name: "LSP Server"
+  more: "the Language Server Protocol for connecting IDEs and programming language-specific servers"
+
+- name: "Open Source"
+  more: "collaborative, open-source software development"

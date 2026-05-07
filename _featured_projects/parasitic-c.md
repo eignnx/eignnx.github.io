@@ -4,7 +4,7 @@ link_url: "https://github.com/eignnx/parasitic-c"
 rank: 1040
 tags:
   - "C"
-  - "language"
+  - "PL"
   - "compiler"
   - "self-hosted"
 ---

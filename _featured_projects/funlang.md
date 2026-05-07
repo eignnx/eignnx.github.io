@@ -7,6 +7,6 @@ tags:
   - "Rust"
   - "compiler"
   - "type system"
-  - "language"
+  - "PL"
 ---
 A programming language with algebraic data types, pattern-matching, a bidirectional typechecker, a "bytecode" interpreter, and Ruby-like syntax.

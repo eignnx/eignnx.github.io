@@ -4,29 +4,27 @@
     {% for skill in site.data.skills %}
       <li>
         <details>
-              {% for entry in site.data.project_tags %}
-                {% if entry.names contains skill.name %}
-                  <summary title="{{entry.more}}">{{ skill.name }}</summary>
-                  <ul>
-                  {% for synonym in entry.names %}
-                    {% for project in site.featured_projects %}
-                      {% if project.hidden == nil or project.hidden == false  %}
-                        {% for tag in project.tags %}
-                          {% if tag == synonym %}
-                            <li>
-                              <a
-                                href="#{{project.title}}"
-                                onclick="callout('{{ project.title }}')"
-                              >{{ project.title }}</a>
-                            </li>
-                          {% endif %}
-                        {% endfor %}
+          {% for entry in site.data.project_tags %}
+            {% if entry.name == skill.name %}
+              <summary title="{{entry.more}}">{{ skill.name }}</summary>
+              <ul>
+                {% for project in site.featured_projects %}
+                  {% if project.hidden != true %}
+                    {% for tag in project.tags %}
+                      {% if tag == entry.name %}
+                        <li>
+                          <a
+                            href="#{{project.title}}"
+                            onclick="callout('{{ project.title }}')"
+                          >{{ project.title }}</a>
+                        </li>
                       {% endif %}
                     {% endfor %}
-                  {% endfor %}
-                  </ul>
-                {% endif %}
-              {% endfor %}
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endfor %}
         </details>
       </li>
     {% endfor %}

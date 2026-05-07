@@ -4,7 +4,7 @@ rank: 1000
 link_url: "https://github.com/eignnx/m-o"
 tags:
   - "Rust"
-  - "Python3.7"
+  - "Python"
   - "CLI Tool"
   - "nom"
 ---

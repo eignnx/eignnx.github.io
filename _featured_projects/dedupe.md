@@ -1,9 +1,10 @@
 ---
 title: "dedupe"
 rank: 150
+hidden: true
 link_url: "https://github.com/eignnx/dedupe"
 tags:
-  - "Python3"
+  - "Python"
   - "systems programming"
   - "file system"
   - "CLI tool"
