@@ -120,3 +120,6 @@
 
 - name: "Open Source"
   more: "collaborative, open-source software development"
+
+- name: "digital logic"
+  more: "design of devices performing Boolean functions"
