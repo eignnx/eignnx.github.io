@@ -5,18 +5,28 @@
     {% for project in sorted_featured_projects %}
     {% unless project.hidden %}
     <article class="project-grid-item">
-      <h3
-        id="{{ project.title }}"
-        class="{{ project.classes | join: " " }}"
-      >
-        <a href="{{ project.link_url }}">{{ project.title }}</a>
-      </h3>
-      {% if project.classes contains "foss-contribution" %}
-      <a class="foss-main-project" href="{{project.foss_main_project_link}}">{{project.foss_main_project}}</a>
-      <span class="foss-contribution-tag" title="contribution to existing open-source project">OSS CONTRIB.</span>
-      {% endif %}
+      <div class="project-title-row">
+        <h3
+          id="{{ project.title }}"
+          class="{{ project.classes | join: " " }}"
+        >
+          <a href="{{ project.link_url }}">{{ project.title }}</a>
+        </h3>
+        {% if project.classes contains "foss-contribution" %}
+          <a 
+            class="foss-main-project" 
+            href="{{project.foss_main_project_link}}"
+          >{{project.foss_main_project}}</a>
+          <span 
+            class="foss-contribution-tag" 
+            title="contribution to existing open-source project"
+          >OSS CONTRIB.</span>
+        {% endif %}
+      </div>
 
-      <p>{{ project.content }}</p>
+      <div class="project-content">
+        <p>{{ project.content }}</p>
+      </div>
 
       <span class="tags">
         {% for tag in project.tags %}
