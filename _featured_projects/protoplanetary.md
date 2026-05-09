@@ -1,6 +1,9 @@
 ---
 title: protoplanetary
+link_url: "https://github.com/eignnx/protoplanetary"
 rank: 1015
+classes:
+  - monospace
 tags:
   - Rust
   - bevy
