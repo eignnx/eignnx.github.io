@@ -123,3 +123,6 @@
 
 - name: "digital logic"
   more: "design of devices performing Boolean functions"
+
+- name: bevy
+  more: "game engine for the Rust programming language based on the entity-component system architecture"
